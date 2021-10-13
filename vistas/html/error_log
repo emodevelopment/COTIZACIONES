@@ -1,0 +1,19 @@
+[23-Apr-2021 11:38:53 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:38:53 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:38:53 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
+[23-Apr-2021 11:40:24 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:40:24 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:40:24 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
+[23-Apr-2021 11:40:42 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:40:42 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:40:42 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
+[23-Apr-2021 11:43:53 America/El_Salvador] PHP Notice:  Undefined variable: doc_cliente in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_cliente.php on line 25
+[23-Apr-2021 11:43:53 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:43:53 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:43:53 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
+[23-Apr-2021 11:51:22 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:51:22 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:51:22 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
+[23-Apr-2021 11:52:50 America/El_Salvador] PHP Notice:  Undefined variable: impuesto in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:52:50 America/El_Salvador] PHP Warning:  Invalid argument supplied for foreach() in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 124
+[23-Apr-2021 11:52:50 America/El_Salvador] PHP Notice:  Undefined variable: product_id in /home/chapinem/soft21.radiomacz.xyz/vistas/modal/registro_producto.php on line 211
