@@ -5,7 +5,7 @@ if (isset($_REQUEST['utilidad'])) {
     $costo        = floatval($_REQUEST['costo']);
     $utilidad     = ($costo * $utilidad) / 100;
     $precio_venta = $costo + $utilidad;
-    $precio_venta = number_format($precio_venta, 2, '.', '');
+    $precio_venta = number_format($precio_venta);
 
     $price[] = array('precio' => $precio_venta);
     //Creamos el JSON
@@ -16,9 +16,9 @@ if (isset($_REQUEST['utilidad'])) {
     $costo        = floatval($_REQUEST['mod_costo']);
     $utilidad     = ($costo * $utilidad) / 100;
     $precio_venta = $costo + $utilidad;
-    $precio_venta = number_format($precio_venta, 2, '.', '');
+    $precio_venta = number_format($precio_venta);
 
-    $price[] = array('mod_precio' => $precio_venta);
+    $price[] = array('' => $precio_venta);
     //Creamos el JSON
     $json_string = json_encode($price);
     echo $json_string;

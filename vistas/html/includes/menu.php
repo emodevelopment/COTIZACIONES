@@ -76,7 +76,7 @@
 										<li><a href="../html/lineas.php">Categorias</a></li>
 										<li><a href="../html/productos.php">Productos</a></li>
 									    <!--<li><a href="../html/kardex.php">Kardex</a></li>-->
-										<li><a href="../html/ajustes.php">Ajuste de Inventario</a></li>
+										<!--<li><a href="../html/ajustes.php">Ajuste de Inventario</a></li>-->
 									</ul>
 								</li>
 
@@ -89,9 +89,16 @@
 										</span> <span class="menu-arrow"></span></a>
 										<ul class="list-unstyled">
 											<li><a href="../html/new_cotizacion.php">Nueva Cotización</a></li>
-											<li><a href="../html/bitacora_cotizacion.php">Bitácora de Cotizacíon</a></li>
+											<li><a href="../html/bitacora_cotizacion.php">Historial de Cotizacíon</a></li>
 										</ul>
 									</li>
+
+									<li>
+						<a href="#" class="waves-effect waves-primary"><i
+							class="ti-user"></i><span> Fletes </span></a>
+						</li>
+							
+									
 
 											<li class="has_sub">
 												<a href="javascript:void(0);" class="waves-effect waves-primary"><i class="ti-settings"></i><span> Configuración </span> <span class="menu-arrow"></span></a>

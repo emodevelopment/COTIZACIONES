@@ -36,7 +36,7 @@ if ($login->isUserLoggedIn() == true) {
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon.png">
+        <link rel="shortcut icon" href="assets/images/emo.bmp">
 
         <title>Cotizaciones</title>
 
@@ -73,7 +73,7 @@ if ($login->isUserLoggedIn() == true) {
                 <div class="portlet-body">
                 <div id="resultados_ajax"></div><br>
                  <div align="center">
-                    <img src="img/logo_inicio.jpg" class="img-responsive" alt="profile-image" width="200px" height="200px">
+                    <img src="img/logo_inicio.png" class="img-responsive" alt="profile-image" width="200px" height="200px">
                 </div>
 <br>
                 <form method="post" accept-charset="utf-8" action="login.php" name="loginform" class="form-signin">

@@ -68,20 +68,20 @@ if ($count == 1) {
             <td colspan="5" style="width:30%;border-bottom: thin solid;" ><?php echo $nombre_cliente; ?></td>
         </tr>
         <tr>
-            <th style="width:10%;" >Direcci贸n</th>
+            <th style="width:10%;" >Dirección</th>
             <td colspan="5" style="width:30%;border-bottom: thin solid;" ><?php echo $direccion_cliente; ?></td>
         </tr>
         <tr>
             <th style="width:5%;" >Ciudad</th>
             <td style="width:20%;border-bottom: thin solid;" ></td>
-            <th style="width:5%;" >Provincia</th>
+            <th style="width:5%;" >Departamento</th>
             <td style="width:15%;border-bottom: thin solid;" ></td>
             <th style="width:5%;" >Tel.</th>
             <td style="width:10%;border-bottom: thin solid;" ><?php echo $telefono_cliente; ?></td>
 
         </tr>
         <tr>
-            <th style="width:10%;" >RUC:</th>
+            <th style="width:10%;" >NIT/CC:</th>
             <td colspan="5" style="width:10%;border-bottom: thin solid;" ><?php echo $fiscal_cliente; ?></td>
         </tr>
         <tr>

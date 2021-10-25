@@ -13,6 +13,7 @@ if ($conexion) {
     $email         = $rw["email"];
     $logo_url      = $rw["logo_url"];
     $fiscal        = $rw["fiscal_empresa"];
+   /* $sucursal      = $rw["nombre_sucursal"];*/
 
 /*Fin datos empresa*/
     ?>

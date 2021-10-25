@@ -232,7 +232,8 @@ if (isset($conexion)) {
 
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Agregar archivo</button>
+						<!--<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cerrar</button>-->
 						<button type="submit" class="btn btn-primary waves-effect waves-light" id="guardar_datos">Guardar</button>
 					</div>
 				</form>

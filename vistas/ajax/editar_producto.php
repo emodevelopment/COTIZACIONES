@@ -55,7 +55,7 @@ if (empty($_POST['mod_id'])) {
     $precio_venta    = floatval($_POST['mod_precio']);
     $precio_mayoreo  = floatval($_POST['mod_preciom']);
     $precio_especial = floatval($_POST['mod_precioe']);
-    $precio_proyecto = floatval($_POST['mod_preciop']);
+    $precio_proyecto = floatval($_POST['p']);
     $stock           = floatval($_POST['mod_stock']);
     $stock_minimo    = floatval($_POST['mod_minimo']);
     $id_producto     = $_POST['mod_id'];

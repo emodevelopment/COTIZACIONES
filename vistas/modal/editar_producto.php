@@ -19,7 +19,7 @@ if (isset($conexion)) {
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#mod_precios" data-toggle="tab" aria-expanded="true" class="nav-link">
+								<a href="#s" data-toggle="tab" aria-expanded="true" class="nav-link">
 									Precios y Stock
 								</a>
 							</li>
@@ -113,7 +113,7 @@ if (isset($conexion)) {
 								</div>
 
 							</div>
-							<div class="tab-pane fade" id="mod_precios">
+							<div class="tab-pane fade" id="s">
 
 								<div class="row">
 								<!--<div class="col-md-5">
@@ -144,20 +144,20 @@ if (isset($conexion)) {
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
-											<label for="mod_precio" class="control-label">Precio Venta:</label>
-											<input type="text" class="form-control" id="mod_precio" name="mod_precio" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
+											<label for="" class="control-label">Precio Venta:</label>
+											<input type="text" class="form-control" id="" name="" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label for="mod_preciom" class="control-label">Precio Mayoreo:</label>
-											<input type="text" class="form-control" id="mod_preciom" name="mod_preciom" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
+											<label for="m" class="control-label">Precio Mayoreo:</label>
+											<input type="text" class="form-control" id="m" name="m" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label for="mod_precioe" class="control-label">Precio Especial:</label>
-											<input type="text" class="form-control" id="mod_precioe" name="mod_precioe" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales" >
+											<label for="e" class="control-label">Precio Especial:</label>
+											<input type="text" class="form-control" id="e" name="e" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales" >
 										</div>
 									</div>
 								</div>
@@ -165,8 +165,8 @@ if (isset($conexion)) {
 								<div class="row">
 								<div class="col-md-4">
 										<div class="form-group">
-											<label for="mod_preciop" class="control-label">Precio Proyecto:</label>
-											<input type="text" class="form-control" id="mod_preciop" name="mod_preciop" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
+											<label for="p" class="control-label">Precio Proyecto:</label>
+											<input type="text" class="form-control" id="p" name="p" autocomplete="off" onkeyup="this.value=Numeros2(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
 										</div>
 									</div>
 									<div class="col-md-4">
