@@ -1,10 +1,4 @@
 <?php
-
-/*-------------------------
-Autor: Delmar Lopez
-Web: softwys.com
-Mail: softwysop@gmail.com
----------------------------*/
 include 'is_logged.php'; //Archivo verifica que el usario que intenta acceder a la URL esta logueado
 /* Connect To Database*/
 require_once "../db.php";
@@ -83,16 +77,16 @@ while ($row = mysqli_fetch_array($query)) {
             $id_producto          = $row['id_producto'];
             $codigo_producto      = $row['codigo_producto'];
             $nombre_producto      = $row['nombre_producto'];
-            $descripcion_producto = $row['descripcion_producto'];
+            $uso_producto         = $row['uso_producto'];
             $linea_producto       = $row['id_linea_producto'];
             $med_producto         = $row['id_med_producto'];
-            $id_proveedor         = $row['id_proveedor'];
+            $diseño_producto      = $row['diseño_producto'];
             $inv_producto         = $row['inv_producto'];
             $impuesto_producto    = $row['iva_producto'];
-            $costo_producto       = $row['costo_producto'];
-            $utilidad_producto    = $row['utilidad_producto'];
+            $formato_producto     = $row['formato_producto'];
+            $origen_producto      = $row['origen_producto'];
             $precio_producto      = $row['valor1_producto'];
-            $precio_mayoreo       = $row['valor2_producto'];
+            $peso_producto        = $row['peso_producto'];
             $precio_especial      = $row['valor3_producto'];
             $precio_proyecto      = $row['valor4_producto'];
             $stock_producto       = $row['stock_producto'];
@@ -110,16 +104,16 @@ while ($row = mysqli_fetch_array($query)) {
 
                 <input type="hidden" value="<?php echo $codigo_producto; ?>" id="codigo_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $nombre_producto; ?>" id="nombre_producto<?php echo $id_producto; ?>">
-                <input type="hidden" value="<?php echo $descripcion_producto; ?>" id="descripcion_producto<?php echo $id_producto; ?>">
+                <input type="hidden" value="<?php echo $uso_producto; ?>" id="uso_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $linea_producto; ?>" id="linea_producto<?php echo $id_producto; ?>">
-                <input type="hidden" value="<?php echo $id_proveedor; ?>" id="proveedor_producto<?php echo $id_producto; ?>">
+                <input type="hidden" value="<?php echo $formato_producto; ?>" id="formato_producto<?php echo $id_producto; ?>">
                 <!--<input type="hidden" value="<?php echo $med_producto; ?>" id="med_producto<?php echo $id_producto; ?>">-->
                 <input type="hidden" value="<?php echo $inv_producto; ?>" id="inv_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $impuesto_producto; ?>" id="impuesto_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $stock_producto; ?>" id="stock_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $stock_min_producto; ?>" id="stock_min_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $status_producto; ?>" id="estado<?php echo $id_producto; ?>">
-                <input type="hidden" value="<?php echo number_format($costo_producto, 2, '.', ''); ?>" id="costo_producto<?php echo $id_producto; ?>">
+                <input type="hidden" value="<?php echo number_format($origen_producto, 2, '.', ''); ?>" id="origen_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo $utilidad_producto; ?>" id="utilidad_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo number_format($precio_producto, 2, '.', ''); ?>" id="precio_producto<?php echo $id_producto; ?>">
                 <input type="hidden" value="<?php echo number_format($precio_mayoreo, 2, '.', ''); ?>" id="precio_mayoreo<?php echo $id_producto; ?>">

@@ -7,7 +7,7 @@ require_once "../php_conexion.php";
 include "../permisos.php";
 $user_id = $_SESSION['id_users'];
 get_cadena($user_id);
-$modulo = "marca";
+$modulo = "uso";
 permisos($modulo, $cadena_permisos);
 //Finaliza Control de Permisos
 //Archivo de funciones PHP
@@ -18,8 +18,8 @@ $action = (isset($_REQUEST['action']) && $_REQUEST['action'] != null) ? $_REQUES
 if ($action == 'ajax') {
     // escaping, additionally removing everything that could be (html/javascript-) code
     $q        = mysqli_real_escape_string($conexion, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
-    $aColumns = array('nombre_marca'); //Columnas de busqueda
-    $sTable   = "marca";
+    $aColumns = array('nombre_uso'); //Columnas de busqueda
+    $sTable   = "uso";
     $sWhere   = "";
     if ($_GET['q'] != "") {
         $sWhere = "WHERE (";
@@ -41,7 +41,7 @@ if ($action == 'ajax') {
     $row         = mysqli_fetch_array($count_query);
     $numrows     = $row['numrows'];
     $total_pages = ceil($numrows / $per_page);
-    $reload      = '../html/marca.php';
+    $reload      = '../html/uso.php';
     //main query to fetch the data
     $sql   = "SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
     $query = mysqli_query($conexion, $sql);
@@ -61,12 +61,12 @@ if ($action == 'ajax') {
                 </tr>
                 <?php
 while ($row = mysqli_fetch_array($query)) {
-            $id_marca     = $row['id'];
-            $nombre       = $row['nombre_marca'];
-            $descripcion  = $row['descripcion_marca'];
-            $estado_marca = $row['estado_marca'];
+            $id_uso     = $row['Id'];
+            $nombre       = $row['nombre_uso'];
+            $descripcion  = $row['descripcion_uso'];
+            $estado_uso = $row['estado_uso'];
             $date_added   = date('d/m/Y', strtotime($row['date_added']));
-            if ($estado_marca == 1) {
+            if ($estado_uso == 1) {
                 $estado = "<span class='badge badge-success'>Activo</span>";
             } else {
                 $estado = "<span class='badge badge-danger'>Inactivo</span>";
@@ -74,12 +74,12 @@ while ($row = mysqli_fetch_array($query)) {
 
             ?>
 
-    <input type="hidden" value="<?php echo $nombre; ?>" id="nombre<?php echo $id_marca; ?>">
-    <input type="hidden" value="<?php echo $descripcion; ?>" id="descripcion<?php echo $id_marca; ?>">
-    <input type="hidden" value="<?php echo $estado_marca; ?>" id="estado<?php echo $id_marca; ?>">
+    <input type="hidden" value="<?php echo $nombre; ?>" id="nombre<?php echo $id_uso; ?>">
+    <input type="hidden" value="<?php echo $descripcion; ?>" id="descripcion<?php echo $id_uso; ?>">
+    <input type="hidden" value="<?php echo $estado_marca; ?>" id="estado<?php echo $id_uso; ?>">
 
     <tr>
-        <td><span class="badge badge-purple"><?php echo $id_marca; ?></span></td>
+        <td><span class="badge badge-purple"><?php echo $id_uso; ?></span></td>
         <td><?php echo $nombre; ?></td>
         <td><?php echo $descripcion; ?></td>
         <td><?php echo $estado; ?></td>
@@ -88,7 +88,7 @@ while ($row = mysqli_fetch_array($query)) {
                 <button type="button" class="btn btn-warning btn-sm dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"> <i class='fa fa-cog'></i> <i class="caret"></i> </button>
                 <div class="dropdown-menu dropdown-menu-right">
                    <?php if ($permisos_editar == 1) {?>
-                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editarMarca" onclick="obtener_datos('<?php echo $id_marca; ?>');"><i class='fa fa-edit'></i> Editar</a>
+                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editarUso" onclick="obtener_datos('<?php echo $id_marca; ?>');"><i class='fa fa-edit'></i> Editar</a>
                    <?php }
             if ($permisos_eliminar == 1) {?>
                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#dataDelete" data-id="<?php echo $id_marca; ?>"><i class='fa fa-trash'></i> Borrar</a>

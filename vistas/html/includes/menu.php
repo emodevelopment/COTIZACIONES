@@ -74,8 +74,11 @@
 									<span class="menu-arrow"></span></a>
 									<ul class="list-unstyled">
 										<li><a href="../html/lineas.php">Categorias</a></li>
+										<li><a href="../html/diseño.php">Diseños</a></li>
+										<li><a href="../html/formato.php">Formatos</a></li>
 										<li><a href="../html/marca.php">Marca</a></li>
 										<li><a href="../html/productos.php">Productos</a></li>
+										<li><a href="../html/uso.php">Usos</a></li>
 									    <!--<li><a href="../html/kardex.php">Kardex</a></li>-->
 										<!--<li><a href="../html/ajustes.php">Ajuste de Inventario</a></li>-->
 									</ul>

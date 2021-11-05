@@ -8,10 +8,10 @@ if (!isset($_SESSION['user_login_status']) and $_SESSION['user_login_status'] !=
 require_once "../db.php"; //Contiene las variables de configuracion para conectar a la base de datos
 require_once "../php_conexion.php"; //Contiene funcion que conecta a la base de datos
 //Inicia Control de Permisos
-include "../permisos.php";
+//include "../permisos.php";
 $user_id = $_SESSION['id_users'];
-get_cadena($user_id);
-$modulo = "Categorias";
+//get_cadena($user_id);
+$modulo = "uso";
 //permisos($modulo, $cadena_permisos);
 //Finaliza Control de Permisos
 $title     = "Categorias";
@@ -40,7 +40,7 @@ $pacientes = 1;
 					<div class="portlet">
 						<div class="portlet-heading bg-primary">
 							<h3 class="portlet-title">
-								Marca Producto
+								Usos del Producto
 							</h3>
 							<div class="portlet-widgets">
 								<a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
@@ -56,9 +56,9 @@ $pacientes = 1;
 
 <?php
 //if ($permisos_editar == 1) {
-        include '../modal/registro_marca.php';
-        include "../modal/editar_marca.php";
-        include "../modal/eliminar_marca.php";
+        include '../modal/registro_uso.php';
+        include "../modal/editar_uso.php";
+        include "../modal/eliminar_uso.php";
     //}
     ?>
 
@@ -78,7 +78,7 @@ $pacientes = 1;
 											</div>
 											<div class="col-md-3">
 												<div class="btn-group pull-right">
-												<button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#nuevaMarca"><i class="fa fa-plus"></i> Nueva</button>
+												<button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#nuevoUso"><i class="fa fa-plus"></i> Nuevo</button>
 												</div>
 
 											</div>
@@ -128,7 +128,7 @@ $pacientes = 1;
 	<!-- ============================================================== -->
 	<!-- Todo el codigo js aqui -->
 	<!-- ============================================================== -->
-	<script type="text/javascript" src="../../js/marca.js"></script>
+	<script type="text/javascript" src="../../js/uso.js"></script>
 	<script>
        $(document).ready( function () {
         $(".UpperCase").on("keypress", function () {
