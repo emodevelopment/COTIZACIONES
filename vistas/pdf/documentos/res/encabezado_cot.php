@@ -21,7 +21,7 @@ if ($conexion) {
         <tr>
 
             <td style="width: 18%;">
-                <img style="width: 100%;" src="../<?php echo $logo_url; ?>" alt="Logo"><br>
+                <img style="width: 70%;" src="../<?php echo $logo_url; ?>" alt="Logo"><br>
 
             </td>
               <td style="width: 12%;"></td>

@@ -32,13 +32,13 @@ if (empty($_GET["bd"])) {
                          <label for="field-2" class="control-label">Host:</label>
                          <INPUT type="text" class="form-control" name="host" id ="host" value="localhost"><br>
                             <label for="field-2" class="control-label">Base de Datos;</label>
-                            <INPUT type="text" class="form-control" name="bd" id ="bd" value="u147309006_miscelanea" required><br>
+                            <INPUT type="text" class="form-control" name="bd" id ="bd" value="cotizaciones" required><br>
                             </div>
                             <div class="col-md-6">
                              <label for="field-2" class="control-label">Usuario:</label>
-                             <INPUT type="text" class="form-control" name="usuario" id ="usuario" value="u147309006_miscelanea"><br>
+                             <INPUT type="text" class="form-control" name="usuario" id ="usuario" value="root"><br>
                                  <label for="field-2" class="control-label">Contraseña:</label>
-                                 <INPUT class="form-control" type="text" name="passwd" id="passwd" value="Miscelanea@2021"><br>
+                                 <INPUT class="form-control" type="text" name="passwd" id="passwd" value=""><br>
                                  </div>
                              </div>
                              <div class="row">

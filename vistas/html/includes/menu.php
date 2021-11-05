@@ -1,12 +1,12 @@
 <!-- Top Bar Start -->
 <div class="topbar">
 
-	<!-- LOGO 
+	<!-- LOGO -->
 	<div class="topbar-left">
 		<div class="text-center">
-			<img src="#" width="123" heigth="120" />
+			<img src="../../assets/images/icono_menu.png" width="70" heigth="70" class="rounded-circle" />
 		</div>
-	</div>-->
+	</div>
 
 	<!-- Button mobile view to collapse sidebar menu -->
 	<nav class="navbar-custom">
@@ -74,6 +74,7 @@
 									<span class="menu-arrow"></span></a>
 									<ul class="list-unstyled">
 										<li><a href="../html/lineas.php">Categorias</a></li>
+										<li><a href="../html/marca.php">Marca</a></li>
 										<li><a href="../html/productos.php">Productos</a></li>
 									    <!--<li><a href="../html/kardex.php">Kardex</a></li>-->
 										<!--<li><a href="../html/ajustes.php">Ajuste de Inventario</a></li>-->
@@ -105,7 +106,7 @@
 												<ul class="list-unstyled">
 													<li><a href="../html/empresa.php">Empresa</a></li>
 													<li><a href="../html/sucursales.php">Sucursales</a></li>
-													<li><a href="../html/comprobantes.php">Comprobantes</a></li>
+													<!--<li><a href="../html/comprobantes.php">Comprobantes</a></li>-->
 													<!--<li><a href="../html/impuestos.php">Impuestos</a></li>-->
 													<li><a href="../html/grupos.php">Grupos de Usuarios</a></li>
 													<li><a href="../html/usuarios.php">Usuario</a></li>

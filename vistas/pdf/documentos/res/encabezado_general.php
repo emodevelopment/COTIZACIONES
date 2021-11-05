@@ -18,7 +18,7 @@ if ($conexion) {
     <table cellspacing="0" style="width: 100%;">
         <tr>
             <td style="width: 25%;">
-                <img style="width: 100%;" src="../<?php echo $logo_url; ?>" alt="Logo"><br>
+                <img style="width: 50%;" src="../<?php echo $logo_url; ?>" alt="Logo"><br>
             </td>
             <td style="width: 50%;font-size:14px; text-align:center">
                 <span style="font-size:20px;"><b><?php echo $bussines_name; ?></b></span>
