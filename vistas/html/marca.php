@@ -16,7 +16,7 @@ $modulo = "Categorias";
 //Finaliza Control de Permisos
 $title     = "Categorias";
 $pacientes = 1;
-?>
+?>                   
 
 <?php require 'includes/header_start.php';?>
 

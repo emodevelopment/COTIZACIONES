@@ -13,17 +13,17 @@ if (empty($_POST['mod_id'])) {
     $nombre      = mysqli_real_escape_string($conexion, (strip_tags($_POST["mod_nombre"], ENT_QUOTES)));
     $descripcion = mysqli_real_escape_string($conexion, (strip_tags($_POST["mod_descripcion"], ENT_QUOTES)));
     $estado      = intval($_POST['mod_estado']);
-    $id_uso    = intval($_POST['mod_id']);
+    $id_linea    = intval($_POST['mod_id']);
 
-    $sql = "UPDATE uso SET  nombre_uso='" . $nombre . "',
-                                estado_uso='" . $estado . "',
-                                descripcion_uso='" . $descripcion . "'
-                                WHERE Id='" . $id_uso . "'";
+    $sql = "UPDATE diseño SET  nombre_diseño='" . $nombre . "',
+                                estado_diseño='" . $estado . "',
+                                descripcion_diseño='" . $descripcion . "'
+                                WHERE id='" . $id_diseño . "'";
     $query_update = mysqli_query($conexion, $sql);
     if ($query_update) {
-        $messages[] = "El item ha sido actualizado con Exito.";
+        $messages[] = "El item ha sido actualizado correctamente.";
     } else {
-        $errors[] = "Lo siento algo ha salido mal, intenta nuevamente." . mysqli_error($conexion);
+        $errors[] = "Lo siento algo ha salido mal intenta nuevamente, o contacte al administrador del sistema para solucionar el error" . mysqli_error($conexion);
     }
 } else {
     $errors[] = "Error desconocido.";
