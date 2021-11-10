@@ -57,10 +57,13 @@ if ($action == 'ajax') {
                     <th>Vendedor</th>
                     <th>Estado</th>
                     <th>Sala</th>
-                    <th class='text-center'>Total</th>
-                    <th></th>
+                    <th>Total</th>
+                    <th>Acciones</th>
 
                 </tr>
+
+
+                <!-- mostrar tabla con el historial de cotizaciones-->
                 <?php
                 while ($row = mysqli_fetch_array($query)) {
                     $id_factura       = $row['id_factura'];
@@ -103,7 +106,6 @@ if ($action == 'ajax') {
                         <td><?php echo $fecha; ?></td>
                         <td><?php echo $nombre_cliente; ?></td>
                         <td><?php echo $nombre_vendedor; ?></td>
-                        <!--<td><?php echo $estado_cot; ?></td>-->
                         <td><span class="badge <?php echo $label_class; ?>"><?php echo $estado_cot; ?></span></td>
                         <td><?php echo $sala; ?></td>
                         <td class='text-left'><b><?php echo $simbolo_moneda . '' . number_format($total_venta, 2); ?></b></td>
