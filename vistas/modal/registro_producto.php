@@ -74,15 +74,71 @@ if (isset($conexion)) {
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label for="proveedor" class="control-label">Proveedor:</label>
+											<label for="proveedor" class="control-label">Diseño:</label>
 											<select class='form-control' name='proveedor' id='proveedor' required>
 												<option value="">-- Selecciona --</option>
 												<?php
 
-    $query_proveedor = mysqli_query($conexion, "select * from proveedores order by nombre_proveedor");
+    $query_proveedor = mysqli_query($conexion, "select * from diseño order by nombre_diseño");
     while ($rw = mysqli_fetch_array($query_proveedor)) {
         ?>
-													<option value="<?php echo $rw['id_proveedor']; ?>"><?php echo $rw['nombre_proveedor']; ?></option>
+													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_diseño']; ?></option>
+													<?php
+}
+    ?>
+
+</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="proveedor" class="control-label">Formato:</label>
+											<select class='form-control' name='proveedor' id='proveedor' required>
+												<option value="">-- Selecciona --</option>
+												<?php
+
+    $query_proveedor = mysqli_query($conexion, "select * from formato order by nombre_formato");
+    while ($rw = mysqli_fetch_array($query_proveedor)) {
+        ?>
+													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_formato']; ?></option>
+													<?php
+}
+    ?>
+
+
+</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="proveedor" class="control-label">Uso:</label>
+											<select class='form-control' name='proveedor' id='proveedor' required>
+												<option value="">-- Selecciona --</option>
+												<?php
+
+    $query_proveedor = mysqli_query($conexion, "select * from uso order by nombre_uso");
+    while ($rw = mysqli_fetch_array($query_proveedor)) {
+        ?>
+													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_uso']; ?></option>
+													<?php
+}
+    ?>
+
+
+</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="proveedor" class="control-label">Marca:</label>
+											<select class='form-control' name='proveedor' id='proveedor' required>
+												<option value="">-- Selecciona --</option>
+												<?php
+
+    $query_proveedor = mysqli_query($conexion, "select * from marca order by nombre_marca");
+    while ($rw = mysqli_fetch_array($query_proveedor)) {
+        ?>
+													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_marca']; ?></option>
 													<?php
 }
     ?>

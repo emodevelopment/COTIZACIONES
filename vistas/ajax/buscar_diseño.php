@@ -122,7 +122,7 @@ echo paginate($reload, $page, $total_pages, $adjacents);
         ?>
     <div class="alert alert-warning alert-dismissible" role="alert" align="center">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>Aviso!</strong> No hay Registro de Linea
+      <strong>Aviso!</strong> No hay Registro del diseño
   </div>
   <?php
 }

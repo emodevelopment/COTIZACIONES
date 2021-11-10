@@ -56,7 +56,7 @@ if ($action == 'ajax') {
                     <th></th>
                     <th>COD.</th>
                     <th class='text-center'>PRODUCTOS</th>
-                    <th class='text-center'>PESO/Kg</th>
+                    <th class='text-center'>STOCK</th>
                     <th class='text-center'>CANT</th>
                     <th class='text-center'>PRECIO</th>
                     <th class='text-center' style="width: 36px;"></th>
@@ -67,7 +67,6 @@ while ($row = mysqli_fetch_array($query)) {
             $codigo_producto = $row['codigo_producto'];
             $nombre_producto = $row['nombre_producto'];
             $stock_producto  = $row['stock_producto'];
-            $marca_producto  = $row['marca'];
             $precio_venta    = $row["valor1_producto"];
             $precio_venta    = number_format($precio_venta, 2, '.', '');
             $image_path      = $row['image_path'];

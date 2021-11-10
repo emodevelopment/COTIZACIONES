@@ -113,7 +113,7 @@ $sql1 = mysqli_query($conexion, "select * from productos where id_producto='" . 
         ?>
                         <option selected disabled value="<?php echo $precio_venta ?>"><?php echo number_format($precio_venta, 2); ?></option>
                         <option value="<?php echo $rw1['valor1_producto'] ?>">PV <?php echo number_format($rw1['valor1_producto'], 2); ?></option>
-                        <option value="<?php echo $rw1['valor2_producto'] ?>">PM <?php echo number_format($rw1['valor2_producto'], 2); ?></option>
+                        <option value="<?php echo $rw1['id_diseño_producto'] ?>">PM <?php echo number_format($rw1['valor2_producto'], 2); ?></option>
                         <option value="<?php echo $rw1['valor3_producto'] ?>">PE <?php echo number_format($rw1['valor3_producto'], 2); ?></option>
                         <?php
 }

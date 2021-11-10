@@ -48,7 +48,7 @@ if (empty($_POST['codigo'])) {
     $impuesto    = intval($_POST['impuesto']);
     $inv         = intval($_POST['inv']);
     //$imp              = intval($_POST['id_imp']);
-    $costo            = floatval($_POST['costo']);
+    $costo            = intval($_POST['costo']);
     $utilidad         = floatval($_POST['utilidad']);
     $precio_venta     = floatval($_POST['precio']);
     $precio_mayoreo   = floatval($_POST['preciom']);
@@ -68,6 +68,9 @@ if (empty($_POST['codigo'])) {
                                         nombre_producto='" . $nombre . "',
                                         descripcion_producto='" . $descripcion . "',
                                         id_linea_producto='" . $linea . "',
+                                        id_diseño_producto='" . $diseño . "',
+                                        id_formato_producto='" . $formato . "',
+                                        id_uso_producto='" . $uso . "',
                                         id_proveedor='" . $proveedor . "',
                                         inv_producto='" . $inv . "',
                                         iva_producto='" . $impuesto . "',
