@@ -1,9 +1,4 @@
 <?php
-/*-------------------------
-Autor: Delmar Lopez
-Web: www.softwys.com
-Mail: softwysop@gmail.com
----------------------------*/
 include 'is_logged.php'; //Archivo verifica que el usario que intenta acceder a la URL esta logueado
 /* Connect To Database*/
 require_once "../db.php"; //Contiene las variables de configuracion para conectar a la base de datos
@@ -48,7 +43,8 @@ if ($action == 'ajax') {
     if ($numrows > 0) {
         echo mysqli_error($conexion);
 ?>
-        <div class="table-responsive">
+           <!--encabezado de la tabla--> 
+        <div class="table-responsive"> 
             <table class="table table-sm table-striped">
                 <tr class="info">
                     <th># Factura</th>
@@ -140,7 +136,7 @@ if ($action == 'ajax') {
         </div>
     <?php
     }
-    //Este else Fue agregado de Prueba de prodria Quitar
+    //Este else Fue agregado de Prueba se prodria Quitar
     else {
     ?>
         <div class="alert alert-warning alert-dismissible" role="alert" align="center">
