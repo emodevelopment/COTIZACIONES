@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_login_status']) and $_SESSION['user_login_status'] != 1) {
-    header("location: ../../login.php");
-    exit;
+	header("location: ../../login.php");
+	exit;
 }
 /* Connect To Database*/
 require_once "../db.php"; //Contiene las variables de configuracion para conectar a la base de datos
@@ -20,13 +20,14 @@ $title          = "Ventas";
 $nombre_usuario = get_row('users', 'usuario_users', 'id_users', $user_id);
 ?>
 
-<?php require 'includes/header_start.php';?>
+<?php require 'includes/header_start.php'; ?>
 
-<?php require 'includes/header_end.php';?>
+<?php require 'includes/header_end.php'; ?>
 
 <!-- Begin page -->
-<div id="wrapper" class="forced enlarged"> <!-- DESACTIVA EL MENU -->
-	<?php require 'includes/menu.php';?>
+<div id="wrapper" class="forced enlarged">
+	<!-- DESACTIVA EL MENU -->
+	<?php require 'includes/menu.php'; ?>
 
 	<!-- ============================================================== -->
 	<!-- Start right Content here -->
@@ -36,7 +37,7 @@ $nombre_usuario = get_row('users', 'usuario_users', 'id_users', $user_id);
 		<div class="content">
 			<div class="container">
 				<?php if ($permisos_ver == 1) {
-    ?>
+				?>
 					<div class="col-lg-12">
 						<div class="portlet">
 							<div class="portlet-heading bg-primary">
@@ -55,10 +56,10 @@ $nombre_usuario = get_row('users', 'usuario_users', 'id_users', $user_id);
 							<div id="bg-primary" class="panel-collapse collapse show">
 								<div class="portlet-body">
 									<?php
-include "../modal/buscar_productos_ventas.php";
-    include "../modal/registro_cliente.php";
-    include "../modal/registro_producto.php";
-    ?>
+									include "../modal/buscar_productos_ventas.php";
+									include "../modal/registro_cliente.php";
+									include "../modal/registro_producto.php";
+									?>
 									<div class="row">
 										<div class="col-lg-8">
 											<div class="card-box">
@@ -75,7 +76,7 @@ include "../modal/buscar_productos_ventas.php";
 															<label for="condiciones" class="control-label">Codigo:</label>
 															<div class="col-md-5" align="left">
 																<div class="input-group">
-																	<input style=" background-color:#FADBD8; border-radius: 5px; border: 1px solid #39c;" type="text" class="form-control" id="barcode" autocomplete="off"  tabindex="1" autofocus="true" >
+																	<input style=" background-color:#FADBD8; border-radius: 5px; border: 1px solid #39c;" type="text" class="form-control" id="barcode" autocomplete="off" tabindex="1" autofocus="true">
 																	<span class="input-group-btn">
 																		<button type="submit" class="btn btn-default"><span class="fa fa-barcode"></span></button>
 																	</span>
@@ -104,9 +105,11 @@ include "../modal/buscar_productos_ventas.php";
 															<label class="col-2 col-form-label"></label>
 															<div class="col-12">
 																<div class="input-group">
-																	<input style=" background-color:#D4E6F1; border-radius: 5px; border: 1px solid #39c;" type="text" id="nombre_cliente" class="form-control" placeholder="Buscar Cliente" required  tabindex="2">
+																	<input style=" background-color:#D4E6F1; border-radius: 5px; border: 1px solid #39c;" type="text" id="nombre_cliente" class="form-control" placeholder="Buscar Cliente" required tabindex="2">
 																	<span class="input-group-btn">
-																		<button type="button" class="btn waves-effect waves-light btn-success" data-toggle="modal" data-target="#nuevoCliente"><li class="fa fa-plus"></li></button>
+																		<button type="button" class="btn waves-effect waves-light btn-success" data-toggle="modal" data-target="#nuevoCliente">
+																			<li class="fa fa-plus"></li>
+																		</button>
 																	</span>
 																	<input id="id_cliente" name="id_cliente" type='hidden'>
 																</div>
@@ -160,62 +163,44 @@ include "../modal/buscar_productos_ventas.php";
 															</div>
 															<div class="col-md-6">
 																<div class="form-group">
-																	<label for="validez">Tiempo de entrega</label>
-																	<input type="text" class="form-control" autocomplete="off" id="em">
-																</div>
+																			<label for="validez">Estado</label>
+																			<select class='form-control' name='sala' id='sala' required disabled="true">
+																		<option value="4">Sin revisar</option>
+
+																		<?php
+
+																		$query_categoria = mysqli_query($conexion, "select * from estados_cot order by nombre_estado");
+																		while ($rw = mysqli_fetch_array($query_categoria)) {
+																		?>
+																			<option value="<?php echo $rw['id_estado']; ?>"><?php echo $rw['nombre_estado']; ?></option>
+																		<?php
+																		}
+																		?>
+																	</select>
+															    </div>
 															</div>
 															<div class="col-md-6">
 																<div class="form-group">
-																	<label for="validez">Despacho desde</label>
-																	<select class="form-control" id="validez" name="validez">
-																		<option value="1">Armenia Sala 1</option>
-																		<option value="2">Armenia Sala 2</option>
-																		<option value="3">Apartado</option>
-																		<option value="4">Barrancabermeja</option>
-																		<option value="5">Barranquilla</option>
-																		<option value="6">Bello</option>
-																		<option value="7">Bogota santa lucia 1</option>
-																		<option value="8">Bogota santa lucia 2</option>
-																		<option value="9">Bogota Suba</option>
-																		<option value="10">Buenaventura</option>
-																		<option value="11">Bucaramanga</option>
-																		<option value="2">Buga</option>
-																		<option value="12">Cali 1</option>
-																		<option value="13">cali 2</option>
-																		<option value="14">Cartagena 1</option>
-																		<option value="15">Cartagena 2</option>
-																		<option value="16">Cartago</option>
-																		<option value="17">Facatativa</option>
-																		<option value="18">Ibague</option>
-																		<option value="19">Ipales</option>
-																		<option value="20">Itagui</option>
-																		<option value="21">Manizales</option>
-																		<option value="22">Medellin guayabal</option>
-																		<option value="23">Medellin Maturin</option>
-																		<option value="24">Medellin San Benito</option>
-																		<option value="25">Monteria 1</option>
-																		<option value="26">Monteria 2</option>
-																		<option value="27">Neiva</option>
-																		<option value="28">Palmira</option>
-																		<option value="29">Pasto</option>
-																		<option value="30">Pereira 1</option>
-																		<option value="31">Pereira 2</option>
-																		<option value="32">Popayan</option>
-																		<option value="33">Rionegro</option>
-																		<option value="34">Sinselejo 1</option>
-																		<option value="35">Sinselejo 2</option>
-																		<option value="36">Soacha</option>
-																		<option value="37">Tulua 1</option>
-																		<option value="38">Tulua 2</option>
-																		<option value="39">Tunja</option>
-																		<option value="40">Valledupar</option>
-																		<option value="41">Villavicencio</option>
+																	<label for="sala">Sala</label>
+																	<select class='form-control' name='sala' id='sala' required>
+																		<option value="">-- Selecciona --</option>
 
+																		<?php
+
+																		$query_categoria = mysqli_query($conexion, "select * from sucursales order by nombre_sucursal");
+																		while ($rw = mysqli_fetch_array($query_categoria)) {
+																		?>
+																			<option value="<?php echo $rw['id_sucursal']; ?>"><?php echo $rw['nombre_sucursal']; ?></option>
+																		<?php
+																		}
+																		?>
 																	</select>
+
+																	
 																</div>
 															</div>
 														</div>
-														<div class="row">
+														<!--<div class="row">
 															<div class="col-md-12">
 																<div class="form-group">
 																	<label for="condiciones">Imprimir Imagenes</label>
@@ -223,7 +208,7 @@ include "../modal/buscar_productos_ventas.php";
 
 																</div>
 															</div>
-														</div>
+														</div>-->
 
 
 														<div class="col-md-12" align="center">
@@ -244,25 +229,25 @@ include "../modal/buscar_productos_ventas.php";
 							</div>
 						</div>
 					</div>
-					<?php
-} else {
-    ?>
+				<?php
+				} else {
+				?>
 					<section class="content">
 						<div class="alert alert-danger" align="center">
 							<h3>Acceso denegado! </h3>
 							<p>No cuentas con los permisos necesario para acceder a este módulo.</p>
 						</div>
 					</section>
-					<?php
-}
-?>
+				<?php
+				}
+				?>
 
 			</div>
 			<!-- end container -->
 		</div>
 		<!-- end content -->
 
-		<?php require 'includes/pie.php';?>
+		<?php require 'includes/pie.php'; ?>
 
 	</div>
 	<!-- ============================================================== -->
@@ -293,63 +278,62 @@ include "../modal/buscar_productos_ventas.php";
 				$('#nombre_cliente').val(ui.item.nombre_cliente);
 				$('#tel1').val(ui.item.fiscal_cliente);
 				$('#em').val(ui.item.email_cliente);
-				$.Notification.notify('success','bottom right','EXITO!', 'CLIENTE AGREGADO CORRECTAMENTE')
+				$.Notification.notify('success', 'bottom right', 'EXITO!', 'CLIENTE AGREGADO CORRECTAMENTE')
 			}
 		});
 	});
 
-	$("#nombre_cliente" ).on( "keydown", function( event ) {
-		if (event.keyCode== $.ui.keyCode.LEFT || event.keyCode== $.ui.keyCode.RIGHT || event.keyCode== $.ui.keyCode.UP || event.keyCode== $.ui.keyCode.DOWN || event.keyCode== $.ui.keyCode.DELETE || event.keyCode== $.ui.keyCode.BACKSPACE )
-		{
-			$("#id_cliente" ).val("");
-			$("#tel1" ).val("");
-			$("#em" ).val("");
+	$("#nombre_cliente").on("keydown", function(event) {
+		if (event.keyCode == $.ui.keyCode.LEFT || event.keyCode == $.ui.keyCode.RIGHT || event.keyCode == $.ui.keyCode.UP || event.keyCode == $.ui.keyCode.DOWN || event.keyCode == $.ui.keyCode.DELETE || event.keyCode == $.ui.keyCode.BACKSPACE) {
+			$("#id_cliente").val("");
+			$("#tel1").val("");
+			$("#em").val("");
 		}
-		if (event.keyCode==$.ui.keyCode.DELETE){
-			$("#nombre_cliente" ).val("");
-			$("#id_cliente" ).val("");
-			$("#tel1" ).val("");
-			$("#em" ).val("");
+		if (event.keyCode == $.ui.keyCode.DELETE) {
+			$("#nombre_cliente").val("");
+			$("#id_cliente").val("");
+			$("#tel1").val("");
+			$("#em").val("");
 		}
 	});
 </script>
 <!-- FIN -->
 <script>
-// print order function
-function printFactura(id_factura) {
-	$('#modal_vuelto').modal('hide');
-	if (id_factura) {
-		$.ajax({
-			url: '../pdf/documentos/imprimir_cotizacion.php',
-			type: 'post',
-			data: {
-				id_factura: id_factura
-			},
-			dataType: 'text',
-			success: function(response) {
-				var WinPrint = window.open('', 'COTIZACION', 'width=800,height=650');
-				WinPrint.document.write(response);
-				WinPrint.document.close();
-               // mywindow.document.close(); // necessary for IE >= 10
-                //mywindow.focus(); // necessary for IE >= 10
-                //mywindow.print();
-                //mywindow.close();
-            } // /success function
+	// print order function
+	function printFactura(id_factura) {
+		$('#modal_vuelto').modal('hide');
+		if (id_factura) {
+			$.ajax({
+				url: '../pdf/documentos/imprimir_cotizacion.php',
+				type: 'post',
+				data: {
+					id_factura: id_factura
+				},
+				dataType: 'text',
+				success: function(response) {
+					var WinPrint = window.open('', 'COTIZACION', 'width=800,height=650');
+					WinPrint.document.write(response);
+					WinPrint.document.close();
+					// mywindow.document.close(); // necessary for IE >= 10
+					//mywindow.focus(); // necessary for IE >= 10
+					//mywindow.print();
+					//mywindow.close();
+				} // /success function
 
-        }); // /ajax function to fetch the printable order
-    } // /if orderId
-} // /print order function
+			}); // /ajax function to fetch the printable order
+		} // /if orderId
+	} // /print order function
 </script>
 <script>
 	function obtener_caja(user_id) {
-		$(".outer_div3").load("../modal/carga_caja.php?user_id=" + user_id);//carga desde el ajax
+		$(".outer_div3").load("../modal/carga_caja.php?user_id=" + user_id); //carga desde el ajax
 	}
 </script>
 <script>
-	function showDiv(select){
-		if(select.value==4){
+	function showDiv(select) {
+		if (select.value == 4) {
 			$("#resultados3").load("../ajax/carga_prima.php");
-		} else{
+		} else {
 			$("#resultados3").load("../ajax/carga_resibido.php");
 		}
 	}
@@ -357,4 +341,3 @@ function printFactura(id_factura) {
 
 <?php require 'includes/footer_end.php'
 ?>
-

@@ -1,6 +1,6 @@
 <?php
 if (isset($conexion)) {
-    ?>
+?>
 	<div id="nuevoProducto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -49,7 +49,7 @@ if (isset($conexion)) {
 									<div class="col-md-12">
 										<div class="form-group">
 											<label for="descripcion" class="control-label">Descripción</label>
-											<textarea class="form-control UpperCase"  id="descripcion" name="descripcion" maxlength="255" autocomplete="off"></textarea>
+											<textarea class="form-control UpperCase" id="descripcion" name="descripcion" maxlength="255" autocomplete="off"></textarea>
 										</div>
 									</div>
 								</div>
@@ -59,16 +59,16 @@ if (isset($conexion)) {
 											<label for="linea" class="control-label">Línea:</label>
 											<select class='form-control' name='linea' id='linea' required>
 												<option value="">-- Selecciona --</option>
-												
+
 												<?php
 
-    $query_categoria = mysqli_query($conexion, "select * from lineas order by nombre_linea");
-    while ($rw = mysqli_fetch_array($query_categoria)) {
-        ?>
+												$query_categoria = mysqli_query($conexion, "select * from lineas order by nombre_linea");
+												while ($rw = mysqli_fetch_array($query_categoria)) {
+												?>
 													<option value="<?php echo $rw['id_linea']; ?>"><?php echo $rw['nombre_linea']; ?></option>
-													<?php
-}
-    ?>
+												<?php
+												}
+												?>
 											</select>
 										</div>
 									</div>
@@ -79,15 +79,15 @@ if (isset($conexion)) {
 												<option value="">-- Selecciona --</option>
 												<?php
 
-    $query_proveedor = mysqli_query($conexion, "select * from diseño order by nombre_diseño");
-    while ($rw = mysqli_fetch_array($query_proveedor)) {
-        ?>
+												$query_proveedor = mysqli_query($conexion, "select * from diseño order by nombre_diseño");
+												while ($rw = mysqli_fetch_array($query_proveedor)) {
+												?>
 													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_diseño']; ?></option>
-													<?php
-}
-    ?>
+												<?php
+												}
+												?>
 
-</select>
+											</select>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -97,16 +97,16 @@ if (isset($conexion)) {
 												<option value="">-- Selecciona --</option>
 												<?php
 
-    $query_proveedor = mysqli_query($conexion, "select * from formato order by nombre_formato");
-    while ($rw = mysqli_fetch_array($query_proveedor)) {
-        ?>
+												$query_proveedor = mysqli_query($conexion, "select * from formato order by nombre_formato");
+												while ($rw = mysqli_fetch_array($query_proveedor)) {
+												?>
 													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_formato']; ?></option>
-													<?php
-}
-    ?>
+												<?php
+												}
+												?>
 
 
-</select>
+											</select>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -116,16 +116,16 @@ if (isset($conexion)) {
 												<option value="">-- Selecciona --</option>
 												<?php
 
-    $query_proveedor = mysqli_query($conexion, "select * from uso order by nombre_uso");
-    while ($rw = mysqli_fetch_array($query_proveedor)) {
-        ?>
+												$query_proveedor = mysqli_query($conexion, "select * from uso order by nombre_uso");
+												while ($rw = mysqli_fetch_array($query_proveedor)) {
+												?>
 													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_uso']; ?></option>
-													<?php
-}
-    ?>
+												<?php
+												}
+												?>
 
 
-</select>
+											</select>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -135,13 +135,13 @@ if (isset($conexion)) {
 												<option value="">-- Selecciona --</option>
 												<?php
 
-    $query_proveedor = mysqli_query($conexion, "select * from marca order by nombre_marca");
-    while ($rw = mysqli_fetch_array($query_proveedor)) {
-        ?>
+												$query_proveedor = mysqli_query($conexion, "select * from marca order by nombre_marca");
+												while ($rw = mysqli_fetch_array($query_proveedor)) {
+												?>
 													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_marca']; ?></option>
-													<?php
-}
-    ?>
+												<?php
+												}
+												?>
 											</select>
 										</div>
 									</div>
@@ -173,14 +173,14 @@ if (isset($conexion)) {
 							<div class="tab-pane fade" id="precios">
 
 								<div class="row">
-								<!--<div class="col-md-5">
+									<!--<div class="col-md-5">
 										<div class="form-group">
 											<label for="id_imp" class="control-label">Impuesto:</label>
 											<select id = "id_imp" class = "form-control" name = "id_imp" required autocomplete="off">
 												<option value="">-SELECCIONE-</option>
-												<?php foreach ($impuesto as $i): ?>
+												<?php foreach ($impuesto as $i) : ?>
 													<option value="<?php echo $i->id_imp; ?>"><?php echo $i->nombre_imp; ?></option>
-												<?php endforeach;?>
+												<?php endforeach; ?>
 											</select>
 										</div>
 									</div>-->
@@ -193,7 +193,7 @@ if (isset($conexion)) {
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="utilidad" class="control-label">Utilidad %:</label>
-											<input type="text" class="form-control" id="utilidad" name="utilidad" pattern="\d{1,4}"  maxlength="4" onkeyup="precio_venta();" >
+											<input type="text" class="form-control" id="utilidad" name="utilidad" pattern="\d{1,4}" maxlength="4" onkeyup="precio_venta();">
 										</div>
 									</div>
 								</div>
@@ -220,7 +220,7 @@ if (isset($conexion)) {
 								</div>
 
 								<div class="row">
-								<div class="col-md-4">
+									<div class="col-md-4">
 										<div class="form-group">
 											<label for="preciop" class="control-label">Precio Proyecto:</label>
 											<input type="text" class="form-control" id="preciop" name="preciop" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
@@ -286,31 +286,31 @@ if (isset($conexion)) {
 						</div>
 
 
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Agregar archivo</button>
-						<!--<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cerrar</button>-->
-						<button type="submit" class="btn btn-primary waves-effect waves-light" id="guardar_datos">Guardar</button>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Agregar archivo</button>
+					<!--<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cerrar</button>-->
+					<button type="submit" class="btn btn-primary waves-effect waves-light" id="guardar_datos">Guardar</button>
+				</div>
 				</form>
 			</div>
 		</div>
 	</div><!-- /.modal -->
-	<?php
+<?php
 }
 ?>
 <script type="text/javascript">
-  	function Numeros(string){//Solo numeros
-    var out = '';
-    var filtro = '1234567890';//Caracteres validos
+	function Numeros(string) { //Solo numeros
+		var out = '';
+		var filtro = '1234567890'; //Caracteres validos
 
-    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos
-    for (var i=0; i<string.length; i++)
-       if (filtro.indexOf(string.charAt(i)) != -1)
-             //Se añaden a la salida los caracteres validos
-	     out += string.charAt(i);
+		//Recorrer el texto y verificar si el caracter se encuentra en la lista de validos
+		for (var i = 0; i < string.length; i++)
+			if (filtro.indexOf(string.charAt(i)) != -1)
+				//Se añaden a la salida los caracteres validos
+				out += string.charAt(i);
 
-    //Retornar valor filtrado
-    return out;
-}
-  </script>
+		//Retornar valor filtrado
+		return out;
+	}
+</script>
