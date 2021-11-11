@@ -20,7 +20,7 @@ if ($action == 'ajax') {
     $sWhere = "";
     $sWhere .= " WHERE facturas_cot.id_cliente=clientes.id_cliente and facturas_cot.id_vendedor=users.id_users and facturas_cot.id_sucursal=sucursales.id_sucursal and facturas_cot.id_estado_cot=estados_cot.id_estado";
     if ($_GET['q'] != "") {
-        $sWhere .= " and  (clientes.nombre_cliente like '%$q%' or facturas_cot.numero_factura like '%$q%' or sucursales.nombre_sucursal like '%$q%' or users.nombre_users like '%$q%')";
+        $sWhere .= " and  (clientes.nombre_cliente like '%$q%' or facturas_cot.numero_factura like '%$q%' or sucursales.nombre_sucursal like '%$q%' or users.nombre_users like '%$q%' or estados_cot.nombre_estado like '%$q%')";
     }
 
     $sWhere .= " order by facturas_cot.id_factura desc";
@@ -51,6 +51,7 @@ if ($action == 'ajax') {
                     <th>Fecha</th>
                     <th>Cliente</th>
                     <th>Vendedor</th>
+                    
                     <th>Estado</th>
                     <th>Sala</th>
                     <th>Total</th>
@@ -69,6 +70,7 @@ if ($action == 'ajax') {
                     $telefono_cliente = $row['telefono_cliente'];
                     $email_cliente    = $row['email_cliente'];
                     $nombre_vendedor  = $row['nombre_users'] . " " . $row['apellido_users'];
+                    //$nombre_item      = $row['id_item'];
                     $estado_cot       = $row['nombre_estado'];
                     if ($estado_cot == 'Venta realizada') {
                         $text_estado = "Venta relaizada";
@@ -102,6 +104,7 @@ if ($action == 'ajax') {
                         <td><?php echo $fecha; ?></td>
                         <td><?php echo $nombre_cliente; ?></td>
                         <td><?php echo $nombre_vendedor; ?></td>
+
                         <td><span class="badge <?php echo $label_class; ?>"><?php echo $estado_cot; ?></span></td>
                         <td><?php echo $sala; ?></td>
                         <td class='text-left'><b><?php echo $simbolo_moneda . '' . number_format($total_venta, 2); ?></b></td>

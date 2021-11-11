@@ -66,7 +66,7 @@ echo $anio = date('Y'); ?>
     <br>
      <table cellspacing="0" style="width: 100%; text-align: left; font-size: 10pt;">
 		<tr>
-		<td style="width:50%; "><strong>Dirección:</strong> <br>Zona 1, Guatemala C.A.<br> Teléfono.: (502)45472055</td>
+		<td style="width:50%; "><strong>Dirección:</strong> <br>Carrera 18 # 10-76<br> Teléfono.: (606)7454526</td>
 
 		</tr>
 	</table>
