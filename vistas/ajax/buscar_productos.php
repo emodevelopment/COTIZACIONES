@@ -62,12 +62,12 @@ if ($action == 'ajax') {
                 <th></th>
                 <th>Código</th>
                 <th>Producto</th>
-                <th class='text-center'>Existencia</th>
-                <th class='text-left'>Costo</th>
+                <!--<th class='text-center'>Existencia</th>
+                <th class='text-left'>Costo</th>-->
                 <th class='text-left'>P. Venta</th>
-                <th class='text-left'>P. Mayoreo</th>
+                <!--<th class='text-left'>P. Mayoreo</th>
                 <th class='text-left'>P. Especial</th>
-                <th class='text-left'>P. Proyecto</th>
+                <th class='text-left'>P. Proyecto</th>-->
                 <th>Estado</th>
                 <th>Agregado</th>
                 <th class='text-right'>Acciones</th>
@@ -136,12 +136,12 @@ if ($image_path == null) {
                     </td>
                     <td><?php echo $codigo_producto; ?></td>
                     <td ><?php echo $nombre_producto; ?></td>
-                    <td class='text-center'><?php echo stock($stock_producto); ?></td>
-                    <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($costo_producto, 2); ?></span></td>
+                    <!--<td class='text-center'><?php echo stock($stock_producto); ?></td>-->
+                    <!--<td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($costo_producto, 2); ?></span></td>-->
                     <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_producto, 2); ?></span></td>
-                    <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_mayoreo, 2); ?></span></td>
+                    <!--<td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_mayoreo, 2); ?></span></td>
                     <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_especial, 2); ?></span></td>
-                    <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_proyecto, 2); ?></span></td>
+                    <td><span class='pull-left'><?php echo $simbolo_moneda . '' . number_format($precio_proyecto, 2); ?></span></td>-->
                     <td><?php echo $estado; ?></td>
                     <td><?php echo $date_added; ?></td>
                     <td >

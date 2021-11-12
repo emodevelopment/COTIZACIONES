@@ -179,7 +179,7 @@ if ($permisos_editar == 1) {
                                                 enctype="multipart/form-data">
                                                 <div>
                                                     <label>Elija Archivo Excel</label> <input type="file" name="file"
-                                                        id="file" accept=".xls,.xlsx">
+                                                        id="file" accept=".xls,.xlsx,.csv">
                                                     <button type="submit" id="submit" name="import"
                                                     class="btn btn-success btn-rounded waves-effect waves-light">Importar Registros</button>
 

@@ -35,7 +35,7 @@ if (isset($conexion)) {
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
-											<label for="codigo" class="control-label">Referencia:</label>
+											<label for="codigo" class="control-label">Ítem:</label>
 											<div id="cod_resultado"></div><!-- Carga los datos ajax del incremento de la fatura -->
 										</div>
 
@@ -53,99 +53,7 @@ if (isset($conexion)) {
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="linea" class="control-label">Línea:</label>
-											<select class='form-control' name='linea' id='linea' required>
-												<option value="">-- Selecciona --</option>
-
-												<?php
-
-												$query_categoria = mysqli_query($conexion, "select * from lineas order by nombre_linea");
-												while ($rw = mysqli_fetch_array($query_categoria)) {
-												?>
-													<option value="<?php echo $rw['id_linea']; ?>"><?php echo $rw['nombre_linea']; ?></option>
-												<?php
-												}
-												?>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="proveedor" class="control-label">Diseño:</label>
-											<select class='form-control' name='proveedor' id='proveedor' required>
-												<option value="">-- Selecciona --</option>
-												<?php
-
-												$query_proveedor = mysqli_query($conexion, "select * from diseño order by nombre_diseño");
-												while ($rw = mysqli_fetch_array($query_proveedor)) {
-												?>
-													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_diseño']; ?></option>
-												<?php
-												}
-												?>
-
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="proveedor" class="control-label">Formato:</label>
-											<select class='form-control' name='proveedor' id='proveedor' required>
-												<option value="">-- Selecciona --</option>
-												<?php
-
-												$query_proveedor = mysqli_query($conexion, "select * from formato order by nombre_formato");
-												while ($rw = mysqli_fetch_array($query_proveedor)) {
-												?>
-													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_formato']; ?></option>
-												<?php
-												}
-												?>
-
-
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="proveedor" class="control-label">Uso:</label>
-											<select class='form-control' name='proveedor' id='proveedor' required>
-												<option value="">-- Selecciona --</option>
-												<?php
-
-												$query_proveedor = mysqli_query($conexion, "select * from uso order by nombre_uso");
-												while ($rw = mysqli_fetch_array($query_proveedor)) {
-												?>
-													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_uso']; ?></option>
-												<?php
-												}
-												?>
-
-
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="proveedor" class="control-label">Marca:</label>
-											<select class='form-control' name='proveedor' id='proveedor' required>
-												<option value="">-- Selecciona --</option>
-												<?php
-
-												$query_proveedor = mysqli_query($conexion, "select * from marca order by nombre_marca");
-												while ($rw = mysqli_fetch_array($query_proveedor)) {
-												?>
-													<option value="<?php echo $rw['id']; ?>"><?php echo $rw['nombre_marca']; ?></option>
-												<?php
-												}
-												?>
-											</select>
-										</div>
-									</div>
-								</div>
+								
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
@@ -170,93 +78,36 @@ if (isset($conexion)) {
 								</div>
 
 							</div>
-							<div class="tab-pane fade" id="precios">
 
-								<div class="row">
-									<!--<div class="col-md-5">
-										<div class="form-group">
-											<label for="id_imp" class="control-label">Impuesto:</label>
-											<select id = "id_imp" class = "form-control" name = "id_imp" required autocomplete="off">
-												<option value="">-SELECCIONE-</option>
-												<?php foreach ($impuesto as $i) : ?>
-													<option value="<?php echo $i->id_imp; ?>"><?php echo $i->nombre_imp; ?></option>
-												<?php endforeach; ?>
-											</select>
-										</div>
-									</div>-->
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="costo" class="control-label">Ultimo Costo:</label>
-											<input type="text" class="form-control" id="costo" name="costo" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales" required>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="utilidad" class="control-label">Utilidad %:</label>
-											<input type="text" class="form-control" id="utilidad" name="utilidad" pattern="\d{1,4}" maxlength="4" onkeyup="precio_venta();">
-										</div>
+
+							
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="precio" class="control-label">Precio Venta:</label>
+										<input type="text" class="form-control" id="precio" name="precio" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales" maxlength="8">
 									</div>
 								</div>
-
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="precio" class="control-label">Precio Venta:</label>
-											<input type="text" class="form-control" id="precio" name="precio" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales" maxlength="8">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="preciom" class="control-label">Precio Mayoreo:</label>
-											<input type="text" class="form-control" id="preciom" name="preciom" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="precioe" class="control-label">Precio Especial:</label>
-											<input type="text" class="form-control" id="precioe" name="precioe" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
-										</div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="preciop" class="control-label">Precio Proyecto:</label>
-											<input type="text" class="form-control" id="preciop" name="preciop" autocomplete="off" onkeyup="this.value=Numeros(this.value)" title="Ingresa sólo números con 0 ó 2 decimales">
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="stock" class="control-label">Stock Inicial:</label>
-											<input type="text" class="form-control" id="stock" name="stock" autocomplete="off" pattern="^[0-9]{1,5}(\.[0-9]{0,2})?$" title="Ingresa sólo números con 0 ó 2 decimales" value="0" maxlength="8">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="minimo" class="control-label">Stock Minimo:</label>
-											<input type="text" class="form-control" id="minimo" name="minimo" autocomplete="off" pattern="^[0-9]{1,5}(\.[0-9]{0,2})?$" title="Ingresa sólo números con 0 ó 2 decimales" value="1" maxlength="8">
-										</div>
-									</div>
-
-								</div>
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="inv" class="control-label">Maneja Inventario:</label>
-											<select class="form-control" id="inv" name="inv" required>
-												<option value="">- Selecciona -</option>
-												<option value="0">Si</option>
-												<option value="1">No</option>
-											</select>
-										</div>
-									</div>
-								</div>
-
-
-
 							</div>
+
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="inv" class="control-label">Maneja Inventario:</label>
+										<select class="form-control" id="inv" name="inv" required>
+											<option value="">- Selecciona -</option>
+											<option value="0">Si</option>
+											<option value="1">No</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+
+
 
 							<div class="tab-pane fade" id="img">
 
