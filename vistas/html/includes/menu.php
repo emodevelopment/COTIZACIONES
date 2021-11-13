@@ -97,10 +97,10 @@
 										</ul>
 									</li>
 
-									<li>
+									<!--<li>
 						<a href="#" class="waves-effect waves-primary"><i
 							class="ti-user"></i><span> Fletes </span></a>
-						</li>
+						</li>-->
 							
 									
 
