@@ -20,7 +20,7 @@ $product_id = $rw['codigo'] + 1;
 //consulta para elegir el impuesto en la modal
 $query    = $conexion->query("select * from impuestos");
 $impuesto = array();
-while ($r = $query->fetch_object()) {$impuesto[] = $r;}
+while ($r = $query->fetch_object()) {$impuesto[] = $r;}  
 
 
 
@@ -48,28 +48,33 @@ $allowedFileType = ['application/vnd.ms-excel','text/xls','text/xlsx','applicati
             foreach ($Reader as $Row)
             {
           
-                $nombres = "";
+                $codigo = "";
                 if(isset($Row[0])) {
-                    $nombres = mysqli_real_escape_string($con,$Row[0]);
+                    $codigo = mysqli_real_escape_string($con,$Row[0]);
                 }
                 
-                $cargo = "";
+                $producto = "";
                 if(isset($Row[1])) {
-                    $cargo = mysqli_real_escape_string($con,$Row[1]);
+                    $producto = mysqli_real_escape_string($con,$Row[1]);
                 }
 				
-                $celular = "";
+                $PVenta = "";
                 if(isset($Row[2])) {
-                    $celular = mysqli_real_escape_string($con,$Row[2]);
+                    $PVenta = mysqli_real_escape_string($con,$Row[2]);
                 }
 				
-                $descripcion = "";
+                $estado = "";
                 if(isset($Row[3])) {
-                    $descripcion = mysqli_real_escape_string($con,$Row[3]);
+                    $estado = mysqli_real_escape_string($con,$Row[3]);
+                }
+
+                $fecha = "";
+                if(isset($Row[3])) {
+                    $fecha = mysqli_real_escape_string($con,$Row[4]);
                 }
                 
-                if (!empty($nombres) || !empty($cargo) || !empty($celular) || !empty($descripcion)) {
-                    $query = "insert into tbl_productos(nombres,cargo, celular, descripcion) values('".$nombres."','".$cargo."','".$celular."','".$descripcion."')";
+                if (!empty($codigo) || !empty($producto) || !empty($PVenta) || !empty($estado) || !empty($fecha)) {
+                    $query = "insert into tbl_productos(nombres,cargo, celular, descripcion) values('".$codigo."','".$producto."','".$PVenta."','".$estado."','".$fecha."')";
                     $resultados = mysqli_query($con, $query);
                 
                     if (! empty($resultados)) {
