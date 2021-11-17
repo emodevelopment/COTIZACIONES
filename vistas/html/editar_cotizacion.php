@@ -123,6 +123,39 @@ include "../modal/buscar_productos_ventas.php";
 												</div>
 											</div>
 
+											<div class="card-box">
+
+												<div class="widget-chart">
+													<div id="resultados_ajaxf" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->
+													<form class="form-horizontal" role="form" id="barcode_form">
+														<div class="form-group row">
+															<label for="barcode_qty" class="col-md-1 control-label">En seguimiento:</label>
+															<div class="col-md-2">
+																<input  type="text" class="form-control" id="" value="" autocomplete="off" onClick="">
+															</div>
+
+															<label for="condiciones" class="control-label">Codigo:</label>
+															<div class="col-md-5" align="left">
+																<div class="input-group">
+																	<input style=" background-color:#FADBD8; border-radius: 5px; border: 1px solid #39c;" type="text" class="form-control" id="barcode" autocomplete="off"  tabindex="1" autofocus="true" >
+																	<span class="input-group-btn">
+																		<button type="submit" class="btn btn-default"><span class="fa fa-barcode"></span></button>
+																	</span>
+																</div>
+															</div>
+															<div class="col-md-2">
+																<button type="button" accesskey="a" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#buscar">
+																	<span class="fa fa-search"></span> Buscar
+																</button>
+															</div>
+														</div>
+													</form>
+
+													<div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->
+
+												</div>
+											</div>
+
 										</div>
 
 										<div class="col-lg-4">
