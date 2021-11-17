@@ -239,5 +239,5 @@ $("#btn_guardar").on("click", function(e) {
 });
 
 function imprimir_factura(id_factura) {
-    VentanaCentrada('../pdf/documentos/ver_factura.php?id_factura=' + id_factura, 'Factura', '', '724', '568', 'true');
+    VentanaCentrada('../pdf/documentos/ver_cotizacion.php?id_factura=' + id_factura, 'Factura', '', '724', '568', 'true');
 }
