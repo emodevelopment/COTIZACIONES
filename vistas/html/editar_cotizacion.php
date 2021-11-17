@@ -127,29 +127,87 @@ include "../modal/buscar_productos_ventas.php";
 
 												<div class="widget-chart">
 													<div id="resultados_ajaxf" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->
-													<form class="form-horizontal" role="form" id="barcode_form">
-														<div class="form-group row">
-															<label for="barcode_qty" class="col-md-1 control-label">En seguimiento:</label>
-															<div class="col-md-2">
-																<input  type="text" class="form-control" id="" value="" autocomplete="off" onClick="">
-															</div>
+													<form method="post" name="frmrevisar2" action="modulos.php?name=cotizaciones&op=revisar3">
+    <table align="center" border="0" cellpadding="5" cellspacing="5">
+      <tr>
+        <td>
+          <input type="radio" name="rdrevision" value="SE" onclick="SE('')" checked>
+          En seguimiento
+        </td>
 
-															<label for="condiciones" class="control-label">Codigo:</label>
-															<div class="col-md-1">
-																<div class="input-group">
-																	<input style=" background-color:#FADBD8; border-radius: 5px; border: 1px solid #39c;" type="text" class="form-control" id="barcode" autocomplete="off"  tabindex="1" autofocus="true" >
-																	<span class="input-group-btn">
-																		<button type="submit" class="btn btn-default"><span class="fa fa-barcode"></span></button>
-																	</span>
-																</div>
-															</div>
-															<div class="col-md-2">
-																<button type="button" accesskey="a" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#buscar">
-																	<span class="fa fa-search"></span> Buscar
-																</button>
-															</div>
-														</div>
-													</form>
+        <td colspan="3">
+          <textarea name="txtobseg" ROWS="2" COLS="86" maxlength="1200" style="background-color: #bce4ff" placeholder="Observaciones de seguimiento"></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="radio" name="rdrevision" value="PV" onclick="PV('')">
+          Venta realizada
+        </td>
+
+        <td>
+          Documento asociado:
+        </td>
+        <td>
+          <input type="text" name="txtdocumento" maxlength="20" size="20" disabled>
+        </td>
+
+        <td rowspan="3">
+          <textarea name="txtobs" ROWS="6" COLS="30" maxlength="1200" disabled placeholder="Observaciones de cierre"></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="radio" name="rdrevision" value="MO" onclick="MO('')">
+          Cotizaci&oacute;n reemplazada por otra
+        </td>
+
+        <td>
+          Nueva cotizaci&oacute;n:
+        </td>
+        <td>
+          CS<input type="text" name="txtnueva" maxlength="20" size="17" disabled>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="radio" name="rdrevision" value="NV" onclick="NV('')">
+          No se realizo venta
+        </td>
+
+        <td>
+          Motivo de no venta:
+        </td>
+        <td>
+          <select name="slmotivo" style="width:250" disabled>
+            <?php
+            $sql = "SELECT * FROM cotizaciones_motivos WHERE estado = 'A' ORDER BY descripcion;";
+            $bd->consulta($sql);
+            while($motivos=@mysql_fetch_row($bd->Consulta_ID))
+              echo "<option value=\"$motivos[0]\">$motivos[1]</option>";
+            ?>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="4" align="center">
+          <br>
+          <a href="modulos.php?name=cotizaciones&op=revisar" style="color:black; text-decoration:none">
+            <img src="imagenes/iconos/atras.png"  alt="VOLVER" border="0" width="126" height="34">
+          </a>
+          &nbsp;&nbsp;
+          <input type="image" src="imagenes/iconos/guardar.png" border="0" width="126" height="34">
+          <input type="hidden" name="cotizacion" value="<?php echo $num_cotizacion;?>">
+          &nbsp;&nbsp;
+          <img src="imagenes/iconos/pdf.jpg" border="0" width="75" height="35" style="cursor:pointer" onclick="PDF('')">
+        </td>
+      </tr>
+    </table>
+  </form>
 
 													<div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->
 
