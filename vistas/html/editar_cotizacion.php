@@ -135,7 +135,7 @@ include "../modal/buscar_productos_ventas.php";
 															</div>
 
 															<label for="condiciones" class="control-label">Codigo:</label>
-															<div class="col-md-5" align="left">
+															<div class="col-md-1" align="left">
 																<div class="input-group">
 																	<input style=" background-color:#FADBD8; border-radius: 5px; border: 1px solid #39c;" type="text" class="form-control" id="barcode" autocomplete="off"  tabindex="1" autofocus="true" >
 																	<span class="input-group-btn">
